@@ -9,6 +9,16 @@ I assume that you know what **vNext** is: [https://github.com/aspnet/home](https
 
 I hope you'll find this useful. 
 
+####TL;DR
+Download this repo, switch to project folder and run from console:
+
+```
+kpm restore
+kpm build
+k run
+```
+
+
 ##Projects
 
 * [CSharpStart](CSharpStart)
