@@ -1,13 +1,12 @@
 using System;
 
-namespace ConsoleApp1
+namespace MongoSample
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
-            Console.ReadLine();
+
         }
     }
 }
