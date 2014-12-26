@@ -1,12 +1,24 @@
 # MongoDB MVA C# files in vNext
 ===========================
 
-:bear: Side project to sedouard/mongodb-mva of Microsoft Virtual Academy for C# MongoDB examples rewritten to run in vNext KRE
+This is a small, companion project to [sedouard/mongodb-mva](https://github.com/sedouard/mongodb-mva) repository for Microsoft Virtual Academy **C#**/**MongoDB** examples rewritten to run in **vNext** **KRE** on OS X/Yosemite (or any other **KRE** supported system). R&D-ed and written while watching Module 4 of this online course: 
+[You've Got Documents! A MongoDB Jump Start](http://www.microsoftvirtualacademy.com/training-courses/you-ve-got-documents-a-mongodb-jump-start) from @MSVirtAcademy. 
 
-##Contents
+I love MongoDB and use C# at work in my company.  I've already got certificate for NodeJS and MongoDB - but had no previous experience with **C#** and **MongoDB** combo.
+
+I assume that you know what **vNext** is: [https://github.com/aspnet/home](https://github.com/aspnet/home)
+
+I hope you'll find this useful. 
+
+##Projects
 
 * [CSharpStart](CSharpStart)
 * [CSharpEnd](CSharpEnd)
+
+##Projects Description
+
+* [CSharpStart](#csharpstart)
+* [CSharpEnd](#csharpend)
 
 ##What's inside
 
@@ -81,35 +93,52 @@ k run
 
 ###CSharpEnd
 
-This project starts exactly from **CSharpStart** boilerplate project. You could follow the same steps to recreate *blank slate* for this one.
+This project starts exactly from **CSharpStart** boilerplate project. You could follow the same steps to recreate *blank slate* for this one and then add content to `Program.cs` as you need.
 
-**[BUMMER]** At this point building the project under vNext fails - probably due to MongoDB C# driver incompatibility with vNext [investigating]:
+![CSharpEnd project in Atom Editor](docs/end-atom-editor.jpg)
 
+**[BUMMER]** Running project *as is* without changes in generated dependencies will fail (at least at the time of writing). Thanks to Victor Hurdugaci (@VictorHurdugaci on @Twitter): [https://twitter.com/victorhurdugaci/status/548493405220007937](https://twitter.com/victorhurdugaci/status/548493405220007937) for solution. `project.json` has been modified to not have reference to `aspnetcore50` framework.
+> VictorHurdugaci: @blazejewicz Try to remove the aspnetcore50 target configuration from project.json
+
+
+####Build and run your project
+
+#####Install dependencies
+```
+kpm restore
+Restoring packages for /Users/piotrblazejewicz/git/mongodb-mva-vnext/CSharpEnd/project.json
+[...]
+Resolving complete, 167ms elapsed
+Restore complete, 170ms elapsed
+```
+#####Build/compile
 ```
 kpm build
 
 Building CSharpEnd for Asp.Net,Version=v5.0
   Using Project dependency CSharpEnd 1.0.0
-    Source: /Users/piotrblazejewicz/git/mongodb-mva-vnext/CSharpEnd/project.json
-
-  Using Package dependency mongocsharpdriver 1.10.0-rc0
-    Source: /Users/piotrblazejewicz/.kpm/packages/mongocsharpdriver/1.10.0-rc0
-    File: lib/net35/MongoDB.Bson.dll
-    File: lib/net35/MongoDB.Driver.dll
 [...]
- Using Package dependency System.Threading.Tasks 4.0.10-beta-22231
-    Source: /Users/piotrblazejewicz/.kpm/packages/System.Threading.Tasks/4.0.10-beta-22231
-    File: lib/contract/System.Threading.Tasks.dll
-
-/Users/piotrblazejewicz/git/mongodb-mva-vnext/CSharpEnd/Program.cs(1,7): error CS0246: The type or namespace name 'MongoDB' could not be found (are you missing a using directive or an assembly reference?)
-/Users/piotrblazejewicz/git/mongodb-mva-vnext/CSharpEnd/Program.cs(2,7): error CS0246: The type or namespace name 'MongoDB' could not be found (are you missing a using directive or an assembly reference?)
-/Users/piotrblazejewicz/git/mongodb-mva-vnext/CSharpEnd/Program.cs(14,11): error CS0246: The type or namespace name 'MongoClient' could not be found (are you missing a using directive or an assembly reference?)
-/Users/piotrblazejewicz/git/mongodb-mva-vnext/CSharpEnd/Program.cs(14,36): error CS0246: The type or namespace name 'MongoClient' could not be found (are you missing a using directive or an assembly reference?)
-
-Build failed.
+Build succeeded.
     0 Warnings(s)
-    4 Error(s)
+    0 Error(s)
 
-Time elapsed 00:00:01.3120005
+Time elapsed 00:00:01.8840093
 ```
 
+#####[optional] Make sure that your local MongoDB server is running:
+
+```
+mongod
+mongod --help for help and startup options
+2014-12-26T16:17:31.056+0100 [initandlisten] MongoDB starting : pid=19170 port=27017 dbpath=/data/db 64-bit host=peter
+[...]
+```
+
+#####Run program
+```
+k run
+549d7c6551dc304af5c1d5f6
+Successfully updated 1 document.
+50100000
+number of documents removed: 1
+```
