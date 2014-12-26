@@ -79,6 +79,6 @@ Time elapsed 00:00:01.3558733
 k run
 ```
 
+###CSharpEnd
 
-
-
+This project starts exactly from **CSharpStart** boilerplate project. You could follow the same steps to recreate *blank slate* for this one.
