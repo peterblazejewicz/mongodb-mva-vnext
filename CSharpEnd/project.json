@@ -1,5 +1,9 @@
 {
   "version": "1.0.0-*",
+  "authors": [
+    "Peter Blazejewicz"
+  ],
+  "description": "Module 3: MongoDB Node.js and C# Language Drivers vNext port to C#",
   "dependencies": {
     "mongocsharpdriver": "1.10.0-rc0"
   },
