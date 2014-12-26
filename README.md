@@ -1,5 +1,4 @@
-# MongoDB MVA C# files in vNext
-===========================
+#MongoDB MVA C# files in vNext
 
 This is a small, companion project to [sedouard/mongodb-mva](https://github.com/sedouard/mongodb-mva) repository for Microsoft Virtual Academy **C#**/**MongoDB** examples rewritten to run in **vNext** **KRE** on OS X/Yosemite (or any other **KRE** supported system). R&D-ed and written while watching Module 4 of this online course: 
 [You've Got Documents! A MongoDB Jump Start](http://www.microsoftvirtualacademy.com/training-courses/you-ve-got-documents-a-mongodb-jump-start) from @MSVirtAcademy. 
