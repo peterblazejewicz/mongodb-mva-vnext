@@ -28,7 +28,13 @@ I hope you'll find this useful.
 
 This is **vNext** version of C# console application boilerplate Visual Studio project you can see on original repository [here](https://github.com/sedouard/mongodb-mva/tree/master/module3_language_drivers/CSharpStart).
 
-The project was scaffolded with @Yeoman [generator-aspnet](https://github.com/OmniSharp/generator-aspnet) tool. To recreate this project boilerplate when starting blank slate project you should follow below steps.
+The project was scaffolded with @Yeoman [generator-aspnet](https://github.com/OmniSharp/generator-aspnet) tool.
+
+You could read more about **generator-aspnet** on MSDN blog below:
+
+[Yeoman generators for ASP.NET 5](http://blogs.msdn.com/b/webdev/archive/2014/12/17/yeoman-generators-for-asp-net-vnext.aspx)
+
+To recreate this project boilerplate when starting blank slate project you should follow below steps.
 
 ####Install @Yeoman:  
 
